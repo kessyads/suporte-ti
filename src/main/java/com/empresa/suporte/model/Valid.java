@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "tickets")
-public class Ticket {
+public class Valid {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,19 +22,6 @@ public class Ticket {
 
     private LocalDateTime dataAbertura;
     private LocalDateTime dataFechamento;
-
-    // Construtor vazio
-    public Ticket() {
-    }
-
-    // Construtor com todos os campos
-    public Ticket(Long id, String descricao, String status, LocalDateTime dataAbertura, LocalDateTime dataFechamento) {
-        this.id = id;
-        this.descricao = descricao;
-        this.status = status;
-        this.dataAbertura = dataAbertura;
-        this.dataFechamento = dataFechamento;
-    }
 
     // Getters e Setters
     public Long getId() {
